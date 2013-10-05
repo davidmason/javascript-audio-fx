@@ -1,0 +1,21 @@
+{
+  "name": "audio-fx",
+  "version": "0.4.1",
+  "description": "Simple support for html5 audio tag loading, playing and pooling",
+  "main": "audio-fx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidmason/javascript-audio-fx.git"
+  },
+  "keywords": [
+    "html5",
+    "audio"
+  ],
+  "author": "jakesgordon and davidmason",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "6c39419427c58d08b1381357e182c71312d94259"
+}
