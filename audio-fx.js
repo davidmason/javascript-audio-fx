@@ -69,7 +69,8 @@ module.exports = function() {
 
     var formats = options.formats || [],
         format  = choose(formats),
-        pool    = [];
+        pool    = [],
+        reload  = options.reload || false;
 
     src = src + (format ? '.' + format : '');
 
@@ -87,8 +88,12 @@ module.exports = function() {
 
       play: function() {
         var audio = find(pool);
-        if (audio)
+        if (audio) {
+          // chrome needs this to replay a sound
+          // but it seems to slow firefox down
+          if (reload) audio.load();
           audio.play();
+        }
       },
 
       stop: function() {
@@ -99,6 +104,7 @@ module.exports = function() {
           audio.currentTime = 0;
         }
       }
+
     };
 
   };
